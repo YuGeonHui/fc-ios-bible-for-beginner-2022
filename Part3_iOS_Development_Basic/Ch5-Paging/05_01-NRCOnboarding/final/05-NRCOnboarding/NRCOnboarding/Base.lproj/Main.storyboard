@@ -44,7 +44,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your first race, last mile, or push out-whatever your pace,  distance or need, we've got the playlist to match" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV2-nP-u1q">
-                                                    <rect key="frame" x="50" y="523.5" width="314" height="61"/>
+                                                    <rect key="frame" x="49" y="523.5" width="314" height="61"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -132,6 +132,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_onboarding_bg" width="900" height="2100"/>
+        <image name="img_onboarding_bg" width="450" height="1050"/>
     </resources>
 </document>
