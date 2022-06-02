@@ -21,6 +21,16 @@ class SearchViewController: UIViewController {
         if let flowlayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowlayout.estimatedItemSize = .zero
         }
+        
+        self.navigationItem.title = "Search"
+        
+        // MARK: - Made Search Controller 
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        searchController.searchResultsUpdater = self
+        
+        self.navigationItem.searchController = searchController
     }
 }
 
@@ -47,7 +57,7 @@ extension SearchViewController: UICollectionViewDataSource {
 
 extension SearchViewController: UICollectionViewDelegateFlowLayout {
     
-    // 컬렉션 뷰 하나의 사이즈 
+    // 컬렉션 뷰 하나의 사이즈
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let interItemSpacing: CGFloat = 1
@@ -66,5 +76,14 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
     // 아이템간의 위아래 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
+    }
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        let search = searchController.searchBar.text
+        print("search \(search)")
     }
 }
