@@ -29,10 +29,41 @@ class FrameworkListViewController: UIViewController {
         navigationController?.navigationBar.topItem?.title = "☀️ Apple Frameworks"
         
         // Presentation, Data, Layout
+        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
+            
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FrameworkCell", for: indexPath) as? FrameworkCell else {
+                
+                return nil
+            }
+            
+            cell.configure(item)
+            return cell
+        })
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(list, toSection: .main)
+        
+        dataSource.apply(snapshot)
+        
+        collectionView.collectionViewLayout = layout()
 //        diffable datasoure : Presentation
 //        snapshot : Data
 //        compositional Layout : Layout
       
+    }
+    
+    private func layout() -> UICollectionViewCompositionalLayout {
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .fractionalWidth(0.33))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.33))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+        let section = NSCollectionLayoutSection(group: group)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        return layout
     }
 }
 
