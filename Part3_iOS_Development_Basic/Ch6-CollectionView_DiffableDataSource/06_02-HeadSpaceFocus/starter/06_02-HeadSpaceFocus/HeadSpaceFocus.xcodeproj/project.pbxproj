@@ -16,6 +16,8 @@
 		943BB56428150EFB005A1B6E /* HeadSpaceFocusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BB56328150EFB005A1B6E /* HeadSpaceFocusUITests.swift */; };
 		943BB56628150EFB005A1B6E /* HeadSpaceFocusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BB56528150EFB005A1B6E /* HeadSpaceFocusUITestsLaunchTests.swift */; };
 		943BB57728151183005A1B6E /* Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BB57628151183005A1B6E /* Focus.swift */; };
+		B6D2EA5828557E6300394C70 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D2EA5728557E6300394C70 /* FocusViewController.swift */; };
+		B6D2EA5A2855812C00394C70 /* FocusViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D2EA592855812B00394C70 /* FocusViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		943BB56328150EFB005A1B6E /* HeadSpaceFocusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSpaceFocusUITests.swift; sourceTree = "<group>"; };
 		943BB56528150EFB005A1B6E /* HeadSpaceFocusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSpaceFocusUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		943BB57628151183005A1B6E /* Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus.swift; sourceTree = "<group>"; };
+		B6D2EA5728557E6300394C70 /* FocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
+		B6D2EA592855812B00394C70 /* FocusViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,12 @@
 				943BB54228150EFA005A1B6E /* AppDelegate.swift */,
 				943BB54428150EFA005A1B6E /* SceneDelegate.swift */,
 				943BB57628151183005A1B6E /* Focus.swift */,
+				B6D2EA592855812B00394C70 /* FocusViewCell.swift */,
 				943BB54828150EFA005A1B6E /* Main.storyboard */,
 				943BB54B28150EFB005A1B6E /* Assets.xcassets */,
 				943BB54D28150EFB005A1B6E /* LaunchScreen.storyboard */,
 				943BB55028150EFB005A1B6E /* Info.plist */,
+				B6D2EA5728557E6300394C70 /* FocusViewController.swift */,
 			);
 			path = HeadSpaceFocus;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			files = (
 				943BB57728151183005A1B6E /* Focus.swift in Sources */,
 				943BB54328150EFA005A1B6E /* AppDelegate.swift in Sources */,
+				B6D2EA5A2855812C00394C70 /* FocusViewCell.swift in Sources */,
 				943BB54528150EFA005A1B6E /* SceneDelegate.swift in Sources */,
+				B6D2EA5828557E6300394C70 /* FocusViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
