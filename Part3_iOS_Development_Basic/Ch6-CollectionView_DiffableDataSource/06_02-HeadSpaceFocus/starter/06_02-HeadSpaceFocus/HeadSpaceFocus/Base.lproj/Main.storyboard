@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FocusViewCell" id="p01-CT-19p" customClass="FocusViewCell" customModule="HeadSpaceFocus" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FocusCell" id="p01-CT-19p" customClass="FocusCell" customModule="HeadSpaceFocus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="je8-rR-gYj">
@@ -69,19 +69,46 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="156"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="nJy-1x-Emk" id="m0t-Wg-HpB"/>
+                                            <outlet property="thumbnailImageView" destination="nXe-Qp-aad" id="ItD-4U-8f5"/>
+                                            <outlet property="titleLabel" destination="dn8-zF-TfU" id="QCv-5C-P7Q"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fc-pg-UQv">
+                                <rect key="frame" x="50" y="802" width="314" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3ll-Vi-ljT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="refreshButtonTapped:" destination="07K-eu-e7f" eventType="touchUpInside" id="xWf-in-2pW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xIF-vf-ToX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1fc-pg-UQv" firstAttribute="centerX" secondItem="xIF-vf-ToX" secondAttribute="centerX" id="7Uc-B7-O5Q"/>
                             <constraint firstItem="FXH-w5-OS5" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" id="X5Y-nU-5EC"/>
                             <constraint firstItem="xIF-vf-ToX" firstAttribute="trailing" secondItem="FXH-w5-OS5" secondAttribute="trailing" id="XM1-P8-eWu"/>
+                            <constraint firstItem="1fc-pg-UQv" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" constant="50" id="Z0z-vQ-t47"/>
                             <constraint firstItem="FXH-w5-OS5" firstAttribute="top" secondItem="xIF-vf-ToX" secondAttribute="top" id="aS2-Yy-QSB"/>
                             <constraint firstItem="FXH-w5-OS5" firstAttribute="bottom" secondItem="Ndd-tE-Rzx" secondAttribute="bottom" id="hWx-4m-L3b"/>
+                            <constraint firstItem="xIF-vf-ToX" firstAttribute="bottom" secondItem="1fc-pg-UQv" secondAttribute="bottom" id="ojG-cu-Ikr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="FXH-w5-OS5" id="epy-48-hlP"/>
+                        <outlet property="refreshButton" destination="1fc-pg-UQv" id="7gp-xL-bTp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqZ-hT-Jgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,6 +119,9 @@
         <image name="cloud.heavyrain.fill" catalog="system" width="125" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
