@@ -2,7 +2,6 @@
 
 import Foundation
 
-
 struct GithubProfile: Codable {
     let login: String
     let avatarUrl: String
@@ -19,7 +18,7 @@ struct GithubProfile: Codable {
     }
 }
 
-// App Model < -   JSON :  (Decoding)
+// App Model <- JSON : (Decoding)
 
 let configuration = URLSessionConfiguration.default
 let session = URLSession(configuration: configuration)
@@ -34,14 +33,19 @@ let task = session.dataTask(with: url) { data, response, error in
     }
     
     guard let data = data else { return }
-    // data -> GithubProfile
+    // data -> GithubProfile (구조체)
     
-    do  {
+    do {
+        
         let decoder = JSONDecoder()
         let profile = try decoder.decode(GithubProfile.self, from: data)
+        
         print("profile: \(profile)")
+        
     } catch let error as NSError {
-        print("error: \(error)")
+        
+        print("Error: \(error)")
+        
     }
 }
 
